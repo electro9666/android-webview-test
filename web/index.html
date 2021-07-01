@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  1234
+  <button onclick="openWindow();">openWindow</button><br/>
+  <button onclick="alert1();">alert1</button><br/>
+  <button onclick="confirm1();">confirm1</button><br/>
+  <script>
+    window.addEventListener('beforeunload', (event) => {
+      // 페이지를 떠나기 전에 경고
+      // 사용자가 떠날 것인지 선택하도록 함.
+
+      // alert(12)
+      // 표준에 따라 기본 동작 방지
+      event.preventDefault();
+      // Chrome에서는 returnValue 설정이 필요함
+      event.returnValue = '';
+    });
+    function openWindow() {
+      window.open('index2.html');
+    }
+    function alert1() {
+      alert(1234);
+    }
+    function confirm1() {
+      const result = confirm("delete?");
+      alert('result: ' + result);
+    }
+  </script>
+</body>
+</html>

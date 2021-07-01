@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  두번째 페이지
+  <button onclick="go();">go</button><br/>
+  <script>
+    window.addEventListener('beforeunload', (event) => {
+      // 페이지를 떠나기 전에 경고
+      // 사용자가 떠날 것인지 선택하도록 함.
+
+      // alert(12)
+      // 표준에 따라 기본 동작 방지
+      event.preventDefault();
+      // Chrome에서는 returnValue 설정이 필요함
+      event.returnValue = '';
+    });
+    function go() {
+      location.href = 'http://naver.com';
+    }
+  </script>
+</body>
+</html>
