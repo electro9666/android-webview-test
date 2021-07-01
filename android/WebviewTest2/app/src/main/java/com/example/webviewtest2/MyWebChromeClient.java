@@ -60,6 +60,7 @@ public class MyWebChromeClient extends WebChromeClient {
         newWebView.setWebChromeClient(new MyWebChromeClient() {
             @Override
             public void onCloseWindow(WebView window) {
+                MyLog.i(getClass().getName(), "onCloseWindow2");
                 dialog.dismiss(); }
         });
 

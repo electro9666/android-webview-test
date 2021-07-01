@@ -10,6 +10,7 @@
   <button onclick="openWindow();">openWindow</button><br/>
   <button onclick="alert1();">alert1</button><br/>
   <button onclick="confirm1();">confirm1</button><br/>
+  <button onclick="go3();">go3</button><br/>
   <script>
     window.addEventListener('beforeunload', (event) => {
       // 페이지를 떠나기 전에 경고
@@ -30,6 +31,9 @@
     function confirm1() {
       const result = confirm("delete?");
       alert('result: ' + result);
+    }
+    function go3() {
+      location.href = 'index3.html';
     }
   </script>
 </body>

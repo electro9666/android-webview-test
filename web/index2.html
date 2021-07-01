@@ -7,7 +7,8 @@
 </head>
 <body>
   두번째 페이지
-  <button onclick="go();">go</button><br/>
+  <button onclick="go();">go naver</button><br/>
+  <button onclick="closeWindow();">window.close</button><br/>
   <script>
     window.addEventListener('beforeunload', (event) => {
       // 페이지를 떠나기 전에 경고
@@ -21,6 +22,9 @@
     });
     function go() {
       location.href = 'http://naver.com';
+    }
+    function closeWindow() {
+      window.close();
     }
   </script>
 </body>
