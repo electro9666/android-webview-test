@@ -1,0 +1,2 @@
+rootProject.name = "S11_PrimaryDetailFlowActivity"
+include ':app'

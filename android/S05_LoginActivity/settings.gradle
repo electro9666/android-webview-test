@@ -1,0 +1,2 @@
+rootProject.name = "S05_LoginActivity"
+include ':app'
